@@ -1,14 +1,16 @@
 {
-  "name": "PLUGIN_NAME",
+  "name": "h-instagram-feed",
+  "license": "MIT",
   "private": true,
+  "edje": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GITHUB_USERNAME/PLUGIN_NAME"
+    "url": "git+https://github.com/hrsetyono/h-instagram-feed.git"
   },
   "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "sass": "FOR /f \"delims=\" %v IN ('node -p \"require('edje').includePaths()[0]\"') DO node-sass -w assets/css -o assets/css --output-style compact --include-path \"%v\" ",
-    "watch-x": "node-sass -w assets/sass -o assets/css --include-paths $(node -p \"require('edje').includePaths()\")"
-  },
-  "devDependencies": {}
+    "sass": "FOR /f \"delims=\" %v IN ('node -p \"require('edje').includePaths()[0]\"') DO node-sass -w assets/sass -o assets/css --output-style compressed --include-path \"%v\" ",
+    "remote-debug": "browser-sync start --proxy \"mysite.dev\" --files 'css/*.css/js/*.js'"
+  }
 }
