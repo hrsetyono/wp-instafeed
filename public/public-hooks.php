@@ -59,7 +59,7 @@ class H_Instafeed_Public_Hooks {
   static function get_data( $username, $endcursor = '' ) {
     require_once H_INSTAFEED_PATH . '/vendor/autoload.php';
     
-    $cache = new Instagram\Storage\CacheManager('../../h-instafeed-cache');
+    $cache = new Instagram\Storage\CacheManager('wp-content/instafeed-');
     $api   = new Instagram\Api( $cache );
 
     $api->setUserName( $username );
