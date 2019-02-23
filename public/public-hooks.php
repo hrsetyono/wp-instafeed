@@ -2,7 +2,7 @@
 /*
   Hooks related to Public pages
 */
-class H_Instafeed_Public_Hooks {
+class Instafeed_Public_Hooks {
   function __construct() {
     add_shortcode( 'instafeed', array($this, 'instafeed_shortcode') );
     add_action( 'wp_enqueue_scripts', array($this, 'register_assets') );
@@ -33,16 +33,16 @@ class H_Instafeed_Public_Hooks {
   */
   function register_assets() {
     if( !wp_script_is( 'h-slider', 'enqueued' ) ) {
-      wp_register_style( 'h-slider' , H_INSTAFEED_URL . '/assets/css/h-slider.css' );
+      wp_register_style( 'h-slider' , INSTAFEED_URL . '/assets/css/h-slider.css' );
     }
 
     if( !wp_script_is( 'h-lightbox', 'enqueued' ) ) {
-      wp_register_style( 'h-lightbox' , H_INSTAFEED_URL . '/assets/css/h-lightbox.css' );
+      wp_register_style( 'h-lightbox' , INSTAFEED_URL . '/assets/css/h-lightbox.css' );
     }
 
     // Javascript
-    wp_register_script( 'h-slider', H_INSTAFEED_URL . '/assets/js-vendor/h-slider.min.js', array('jquery'), false, true );
-    wp_register_script( 'h-lightbox', H_INSTAFEED_URL . '/assets/js-vendor/h-lightbox.min.js', array('jquery'), false, true );
+    wp_register_script( 'h-slider', INSTAFEED_URL . '/assets/js-vendor/h-slider.min.js', array('jquery'), false, true );
+    wp_register_script( 'h-lightbox', INSTAFEED_URL . '/assets/js-vendor/h-lightbox.min.js', array('jquery'), false, true );
   }
 
 
@@ -57,7 +57,7 @@ class H_Instafeed_Public_Hooks {
     @return array
   */
   static function get_data( $username, $endcursor = '' ) {
-    require_once H_INSTAFEED_PATH . '/vendor/autoload.php';
+    require_once INSTAFEED_PATH . '/vendor/autoload.php';
     
     $cache = new Instagram\Storage\CacheManager('wp-content/instafeed-');
     $api   = new Instagram\Api( $cache );

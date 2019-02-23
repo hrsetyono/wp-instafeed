@@ -30,7 +30,7 @@ Display a slider containing latest 20 photos of specific user.
 If you want to show the photos with custom markup, you can get the raw JSON data with this function:
 
 ```
-$data = H_Instafeed::get( $username, <$endcursor> );
+$data = INSTAFEED::get( $username, <$endcursor> );
 ```
 
 - **$username** (string)
