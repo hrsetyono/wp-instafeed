@@ -10,19 +10,18 @@ Version: 1.0.0
 
 // If this file is called directly, abort.
 if( !defined( 'WPINC' ) ) { die; }
-define( 'INSTAFEED_VERSION', '0.1.0' );
 define( 'INSTAFEED_URL', plugins_url( '', __FILE__ ) );
 define( 'INSTAFEED_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 
-if( class_exists( 'Instafeed' ) ) { return false; }
-
+new Instafeed();
 class Instafeed {
 	function __construct() {
 		register_activation_hook( __FILE__, array($this, 'activation_hook') );
 		register_deactivation_hook( __FILE__, array($this, 'deactivation_hook') );
 
 		$this->load();
+
 		is_admin() ? $this->admin_load() : $this->public_load();
 	}
 
