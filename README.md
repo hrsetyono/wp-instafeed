@@ -2,6 +2,8 @@
 
 Display instagram photos of any user. Works **without Access Token**!
 
+**Note**: Show by hashtag is not supported yet.
+
 > This plugin is based on [this PHP Library](https://github.com/pgrimaud/instagram-user-feed).
 
 ## Requirement
@@ -11,17 +13,24 @@ Display instagram photos of any user. Works **without Access Token**!
 
 ## Shortcode
 
+SLIDER:
+
 ```
 [instafeed username="..." items-per-slide="4/3/2"]
 ```
 
-Display a slider containing latest 20 photos of specific user.
+STANDARD GALLERY:
+
+```
+[instafeed username="..." items="8"]
+```
 
 - **username** (string)
 
-- **items-per-slide** (string) - *Optional*. Amount of photos per slide. Default value is `4/3/2` which mean 4 items on desktop, 3 items on medium screen (< 767px) and 2 items on small screen (< 480px)
+- **items-per-slide** (string / optional) - Amount of photos per slide. Default value is `4/3/2` which mean 4 items on desktop, 3 items on medium screen (< 767px) and 2 items on small screen (< 480px)
 
-**NOTE**: Show by Hashtag and Load-More functions is on progress...
+- **items** (int / optional) - Amount of photos in the gallery. If this attribute exists, the instafeed become standard image gallery. No slider, but still has Lightbox.
+
 
 -----
 

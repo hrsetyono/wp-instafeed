@@ -22,7 +22,9 @@ class Instafeed {
 
 		$this->load();
 
-		is_admin() ? $this->admin_load() : $this->public_load();
+		if( !is_admin() ) {
+			$this->public_load();
+		}
 	}
 
 	/*
@@ -35,7 +37,7 @@ class Instafeed {
 		Load the required dependencies for Public pages.
 	*/
 	function public_load() {
-		require_once INSTAFEED_PATH . '/public/instagram.php';
+		require_once INSTAFEED_PATH . '/public/shortcode.php';
 
 		new Instafeed_Public_Hooks();
 	}

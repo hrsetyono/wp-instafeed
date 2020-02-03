@@ -104,7 +104,7 @@ class Instafeed_Public_Hooks {
       </a>";
     }
 
-    echo "<div class='h-instafeed-gallery' data-ips='{$atts['items-per-slide']}'>
+    echo "<div class='h-instafeed-slider' data-ips='{$atts['items-per-slide']}'>
       {$content}
     </div>";
   }
