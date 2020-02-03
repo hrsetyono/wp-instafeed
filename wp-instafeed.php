@@ -5,7 +5,7 @@ Description: Display Instagram photos from any user in WordPress theme. Works wi
 Plugin URI: https://github.com/hrsetyono/wp-instagram-feed
 Author: Pixel Studio
 Author URI: https://pixelstudio.id
-Version: 1.0.0
+Version: 1.1.0
 */
 
 // If this file is called directly, abort.
@@ -32,19 +32,10 @@ class Instafeed {
 	}
 
 	/*
-		Load the required dependencies for Admin pages.
-	*/
-	function admin_load() {
-		require_once INSTAFEED_PATH . '/admin/admin-hooks.php';
-
-		new Instafeed_Admin_Hooks();
-	}
-
-	/*
 		Load the required dependencies for Public pages.
 	*/
 	function public_load() {
-		require_once INSTAFEED_PATH . '/public/public-hooks.php';
+		require_once INSTAFEED_PATH . '/public/instagram.php';
 
 		new Instafeed_Public_Hooks();
 	}

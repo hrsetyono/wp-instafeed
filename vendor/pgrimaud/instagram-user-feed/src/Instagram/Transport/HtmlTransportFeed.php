@@ -53,7 +53,7 @@ class HtmlTransportFeed extends TransportFeed
         }
 
         $newCache = new Cache();
-        $newCache->setRhxGis($data->rhx_gis);
+        $newCache->setRhxGis($data->rhx_gis ?? null );
         $newCache->setUserId($data->entry_data->ProfilePage[0]->graphql->user->id);
         if ($res->hasHeader('Set-Cookie')) {
             $newCache->setCookie($res->getHeaders()['Set-Cookie']);
