@@ -3,7 +3,7 @@
 Plugin Name: WP Instagram Feed
 Description: Display Instagram photos from any user in WordPress theme. Works without access token! SHORTCODE: <code>[instafeed username="..."]</code>
 Plugin URI: https://github.com/hrsetyono/wp-instagram-feed
-Author: Pixel Studio ID
+Author: Pixel Studio
 Author URI: https://pixelstudio.id
 Version: 1.0.0
 */
