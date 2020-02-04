@@ -5,7 +5,7 @@ Description: Display Instagram photos from any user in WordPress theme. Works wi
 Plugin URI: https://github.com/hrsetyono/wp-instagram-feed
 Author: Pixel Studio
 Author URI: https://pixelstudio.id
-Version: 1.1.0
+Version: 1.1.1
 */
 
 // If this file is called directly, abort.

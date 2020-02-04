@@ -72,7 +72,7 @@ class Instafeed_Public_Hooks {
     $content = '';
     
     foreach( $data->medias as $photo ) {
-      $caption = preg_replace( '/\s#\w+/', '', $photo->caption );
+      $caption = esc_attr( preg_replace( '/\s#\w+/', '', $photo->caption ) );
       $src = $photo->thumbnails[3]->src;
       
       $content .= "<a href='{$photo->displaySrc}' title='{$caption}'>
@@ -96,7 +96,7 @@ class Instafeed_Public_Hooks {
     $content = '';
 
     foreach( $data->medias as $photo ) {
-      $caption = preg_replace( '/\s#\w+/', '', $photo->caption );
+      $caption = esc_attr( preg_replace( '/\s#\w+/', '', $photo->caption ) );
       $src = $photo->thumbnails[3]->src;
       
       $content .= "<a href='{$photo->displaySrc}' title='{$caption}'>
